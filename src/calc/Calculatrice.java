@@ -23,6 +23,12 @@ public class Calculatrice {
     public void addition() {
 
     }
+
+    public void supprimerMemoire() {
+        while(!calculatrice.empty()) {
+            calculatrice.pop();
+        }
+    }
 }
 
 

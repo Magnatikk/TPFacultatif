@@ -14,6 +14,7 @@ public class main {
 
         for (int i = 0; i < 10; i++) {
             calc.entrerValeur();
+            System.out.println(calc.sommet());
             System.out.println(calculatrice.size());
         }
 
