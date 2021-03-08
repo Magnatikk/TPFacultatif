@@ -2,7 +2,7 @@ package calc;
 import java.util.*;
 
 public class Calculatrice {
-    private Stack<Double> calculatrice = new Stack<Double>();
+    private Stack<Double> calculatrice = new Stack<>();
     
     public Calculatrice(Stack calculatrice) {
         this.calculatrice = calculatrice;
@@ -12,7 +12,7 @@ public class Calculatrice {
         System.out.println("Rentrez le chiffre que vous voulez rentrer :");
         Scanner sc = new Scanner(System.in);
         Double valeur = sc.nextDouble();
-
+        calculatrice.push(valeur);
         return valeur;
     }
 
