@@ -20,9 +20,47 @@ public class Calculatrice {
         return calculatrice.peek();
     }
 
-    public void addition() {
+    public double addition() {
+        double val1 = calculatrice.peek();
+        calculatrice.pop();
+        double val2 = calculatrice.peek();
+        double resultatAddition = val1 + val2;
+        calculatrice.push(val1);
 
+        return resultatAddition;
     }
+
+    public double soustraction() {
+        double val1 = calculatrice.peek();
+        calculatrice.pop();
+        double val2 = calculatrice.peek();
+        double resultatSoustraction = val1 - val2;
+        calculatrice.push(val1);
+
+        return resultatSoustraction;
+    }
+
+    public double multiplication() {
+        double val1 = calculatrice.peek();
+        calculatrice.pop();
+        double val2 = calculatrice.peek();
+        double resultatMultiplication = val1 * val2;
+        calculatrice.push(val1);
+
+        return  resultatMultiplication;
+    }
+
+    public double division() {
+        double val1 = calculatrice.peek();
+        calculatrice.pop();
+        double val2 = calculatrice.peek();
+        double resultatDivision = val1 / val2;
+        calculatrice.push(val1);
+        return resultatDivision;
+    }
+
+
+
 
     public void supprimerMemoire() {
         while(!calculatrice.empty()) {

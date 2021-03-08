@@ -16,6 +16,7 @@ public class main {
             calc.entrerValeur();
             System.out.println(calc.sommet());
             System.out.println(calculatrice.size());
+            System.out.println();
         }
 
     }
