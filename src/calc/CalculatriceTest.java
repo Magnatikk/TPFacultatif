@@ -1,11 +1,11 @@
-/*
+
 package calc;
 import static org.junit.jupiter.api.Assertions.*;
 
 //import org.junit.Test;
 import org.junit.jupiter.api.Test;
 
-import calculatricePile.Calculatrice;
+import calc.Calculatrice;
 
 public class CalculatriceTest {
 
@@ -65,7 +65,7 @@ public class CalculatriceTest {
         Calculatrice c = new Calculatrice();
         c.entrerValeur(2.0);
         c.entrerValeur(3.0);
-        c.negation();
+//        c.negation();
         assertEquals(2, c.nbValeurs());
         assertEquals(-3.0, c.sommet(), 0.0);
 
@@ -76,4 +76,4 @@ public class CalculatriceTest {
 
 
 }
-*/
+

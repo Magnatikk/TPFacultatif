@@ -6,14 +6,14 @@ import java.util.Stack;
 public class main {
     public static void main(String args[]) {
         Stack<Double> calculatrice = new Stack<>();
-        Calculatrice calc = new Calculatrice(calculatrice);
+        Calculatrice calc = new Calculatrice();
 
         System.out.println("Rentrez le chiffre que vous voulez rentrer :");
         Scanner sc = new Scanner(System.in);
         Double valeur = sc.nextDouble();
 
         for (int i = 0; i < 10; i++) {
-            calc.entrerValeur();
+            calc.entrerValeur(2.0);
             System.out.println(calc.sommet());
             System.out.println(calculatrice.size());
             System.out.println();

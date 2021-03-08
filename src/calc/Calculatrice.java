@@ -4,16 +4,20 @@ import java.util.*;
 public class Calculatrice {
     private Stack<Double> calculatrice = new Stack<>();
     
-    public Calculatrice(Stack calculatrice) {
+    public Calculatrice() {
         this.calculatrice = calculatrice;
     }
 
-    public Double entrerValeur() {
-        System.out.println("Rentrez le chiffre que vous voulez rentrer :");
-        Scanner sc = new Scanner(System.in);
-        Double valeur = sc.nextDouble();
-        calculatrice.push(valeur);
-        return valeur;
+    public Double entrerValeur(double v) {
+        calculatrice.push(v);
+        return v;
+    }
+
+    public int nbValeurs() {
+        if(this.calculatrice.isEmpty()) {
+            return 0;
+        }
+        return this.calculatrice.size();
     }
 
     public Double sommet() {
@@ -24,9 +28,9 @@ public class Calculatrice {
         double val1 = calculatrice.peek();
         calculatrice.pop();
         double val2 = calculatrice.peek();
+        calculatrice.pop();
         double resultatAddition = val1 + val2;
-        calculatrice.push(val1);
-
+        calculatrice.push(resultatAddition);
         return resultatAddition;
     }
 
@@ -62,7 +66,7 @@ public class Calculatrice {
 
 
 
-    public void supprimerMemoire() {
+    public void effacer() {
         while(!calculatrice.empty()) {
             calculatrice.pop();
         }
