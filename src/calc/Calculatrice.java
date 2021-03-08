@@ -1,8 +1,8 @@
+package calc;
 import java.util.*;
 
 public class Calculatrice {
-
-
+    Stack<Double> calculatrice = new Stack<Double>();
 
     public Double entrerValeur() {
         System.out.println("Rentrez le chiffre que vous voulez rentrer :");
