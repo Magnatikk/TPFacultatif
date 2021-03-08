@@ -24,47 +24,38 @@ public class Calculatrice {
         return calculatrice.peek();
     }
 
-    public double addition() {
-        double val1 = calculatrice.peek();
-        calculatrice.pop();
-        double val2 = calculatrice.peek();
-        calculatrice.pop();
+    public void addition() {
+        double val1 = calculatrice.pop();
+        double val2 = calculatrice.pop();
         double resultatAddition = val1 + val2;
         calculatrice.push(resultatAddition);
-        return resultatAddition;
     }
 
-    public double soustraction() {
-        double val1 = calculatrice.peek();
-        calculatrice.pop();
-        double val2 = calculatrice.peek();
-        double resultatSoustraction = val1 - val2;
-        calculatrice.push(val1);
-
-        return resultatSoustraction;
+    public void soustraction() {
+        double val1 = calculatrice.pop();
+        double val2 = calculatrice.pop();
+        double resultatAddition = val2 - val1;
+        calculatrice.push(resultatAddition);
     }
 
-    public double multiplication() {
-        double val1 = calculatrice.peek();
-        calculatrice.pop();
-        double val2 = calculatrice.peek();
-        double resultatMultiplication = val1 * val2;
-        calculatrice.push(val1);
-
-        return  resultatMultiplication;
+    public void multiplication() {
+        double val1 = calculatrice.pop();
+        double val2 = calculatrice.pop();
+        double resultatAddition = val1 * val2;
+        calculatrice.push(resultatAddition);
     }
 
-    public double division() {
-        double val1 = calculatrice.peek();
-        calculatrice.pop();
-        double val2 = calculatrice.peek();
-        double resultatDivision = val1 / val2;
-        calculatrice.push(val1);
-        return resultatDivision;
+    public void division() {
+        double val1 = calculatrice.pop();
+        double val2 = calculatrice.pop();
+        double resultatAddition = val2 / val1;
+        calculatrice.push(resultatAddition);
     }
 
-
-
+    public void negation() {
+        double val1 = calculatrice.pop();
+        calculatrice.push(-val1);
+    }
 
     public void effacer() {
         while(!calculatrice.empty()) {
