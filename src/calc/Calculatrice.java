@@ -5,12 +5,10 @@ public class Calculatrice {
     private Stack<Double> calculatrice = new Stack<>();
     
     public Calculatrice() {
-        this.calculatrice = calculatrice;
     }
 
-    public Double entrerValeur(double v) {
-        calculatrice.push(v);
-        return v;
+    public void entrerValeur(double v) {
+        this.calculatrice.push(v);
     }
 
     public int nbValeurs() {
@@ -21,14 +19,19 @@ public class Calculatrice {
     }
 
     public Double sommet() {
-        return calculatrice.peek();
+        if (!calculatrice.isEmpty()) {
+            return calculatrice.peek();
+        }
+        else {
+            return 0.0;
+        }
     }
 
     public void addition() {
-        double val1 = calculatrice.pop();
-        double val2 = calculatrice.pop();
+        double val1 = this.calculatrice.pop();
+        double val2 = this.calculatrice.pop();
         double resultatAddition = val1 + val2;
-        calculatrice.push(resultatAddition);
+        this.calculatrice.push(resultatAddition);
     }
 
     public void soustraction() {
